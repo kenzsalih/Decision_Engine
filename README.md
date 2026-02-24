@@ -34,7 +34,38 @@ Where:
 
 ---
 
-## Current Status
+## Assumptions Made
 
-Currently in research and model definition phase.  
-Architecture and design decisions are being finalized before writing implementation code.
+- Input comes in proper JSON format
+- No cross-criterion conditional constraints
+- Required criteria act as hard filters
+- Either all non-required criteria define weights or none
+- If none define weights → equal weights
+- Zero weights are invalid
+
+---
+
+## Current Status (End of Day 2)
+
+Completed:
+
+- Folder structure
+- Dataclass models
+- Validation layer
+- Hard constraint filtering
+- Sample JSON structure
+
+Not completed yet:
+
+- Normalization
+- Weighted scoring
+- Ranking
+- Explanation breakdown
+
+
+---
+
+## How to Run
+
+```bash
+python main.py sample_inputs/cloud_provider_selection.json
