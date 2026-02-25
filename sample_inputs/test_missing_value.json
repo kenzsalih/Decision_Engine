@@ -1,0 +1,92 @@
+{
+  "criteria": [
+    {
+      "name": "cost_per_month",
+      "type": "numeric",
+      "weight": 0.4,
+      "required": false,
+      "benefit": false,
+      "constraints": [
+        {
+          "operator": "<=",
+          "value": 120
+        }
+      ]
+    },
+    {
+      "name": "latency_ms",
+      "type": "numeric",
+      "weight": 0.3,
+      "required": false,
+      "benefit": false,
+      "constraints": [
+        {
+          "operator": "<=",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "name": "availability_percent",
+      "type": "numeric",
+      "weight": 0.2,
+      "required": false,
+      "benefit": true,
+      "constraints": [
+        {
+          "operator": ">=",
+          "value": 99.9
+        }
+      ]
+    },
+    {
+      "name": "region_support_india",
+      "type": "boolean",
+      "weight": 0.1,
+      "required": false,
+      "constraints": [
+        {
+          "operator": "==",
+          "value": true
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "name": "AWS",
+      "values": {
+        "cost_per_month": 110,
+        "availability_percent": 99.95,
+        "region_support_india": true
+      }
+    },
+    {
+      "name": "GCP",
+      "values": {
+        "cost_per_month": 95,
+        "latency_ms": 105,
+        "availability_percent": 99.99,
+        "region_support_india": true
+      }
+    },
+    {
+      "name": "Azure",
+      "values": {
+        "cost_per_month": 130,
+        "latency_ms": 90,
+        "availability_percent": 99.92,
+        "region_support_india": true
+      }
+    },
+    {
+      "name": "DigitalOcean",
+      "values": {
+        "cost_per_month": 80,
+        "latency_ms": 70,
+        "availability_percent": 99.8,
+        "region_support_india": false
+      }
+    }
+  ]
+}
