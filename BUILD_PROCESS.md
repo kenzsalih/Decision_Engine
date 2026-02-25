@@ -2,7 +2,7 @@
 
 ---
 
-## Date: 2026-02-22
+## Date: 2026-02-23
 
 ### What I worked on today
 
@@ -26,7 +26,7 @@ Today I focused on understanding how I want the decision engine to actually work
 
 ---
 
-## Date: 2026-02-22
+## Date: 2026-02-24
 
 Goal:
 
@@ -137,3 +137,19 @@ Now the project has:
 - Clear data models
 - Strong validation rules
 - Working constraint filtering
+
+## Date: 2026-02-25
+
+I stress-tested the validator using multiple intentionally broken JSON files.
+
+Found gaps in:
+- Missing criterion value detection
+- Type enforcement
+- Error handling (raw traceback exposure)
+
+Updated the validator to:
+- Strictly enforce value presence
+- Enforce numeric/boolean/categorical types
+- Fail fast with clean CLI error messages
+
+This ensures downstream modules (constraint filtering, normalization, scoring) only receive structurally valid input.

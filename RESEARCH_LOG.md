@@ -1,6 +1,6 @@
 # RESEARCH_LOG.md
 
-## Day 1 – Decision Model Research
+## 2026-02-23 – Decision Model Research
 
 ### Things I researched
 
@@ -24,7 +24,7 @@
 
 ---
 
-## Day 2 – Validation & Constraint Research
+## 2026-02-24 – Validation & Constraint Research
 
 ### AI Prompts Used
 
@@ -53,3 +53,21 @@
 
 - Simplified constraint logic to AND-only
 - Limited operators for now (>=, <=, ==)
+
+## 2026-02-25 - Stress-test the validator and check for errors
+
+### AI Prompts used
+
+- Some tests for checking the strength and accuracy of the validation phase of the engine
+- what is the error in the code in validator.py [submited validator.py]
+
+### What i modified
+
+- Strengthened validator to strictly enforce:
+  - Every option must define every criterion.
+  - Strict type checking for numeric, boolean, and categorical.
+  - Required criteria cannot have weights.
+- Wrapped main execution in try/except to prevent traceback exposure.
+
+
+-
