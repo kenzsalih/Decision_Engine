@@ -153,3 +153,39 @@ Updated the validator to:
 - Fail fast with clean CLI error messages
 
 This ensures downstream modules (constraint filtering, normalization, scoring) only receive structurally valid input.
+
+
+## Date 2026-02-26
+
+Implement hard constraint elimination before normalization and scoring.
+
+### Core Design Rules
+
+- Only `required: true` criteria act as hard filters.
+- Required criteria:
+  - Cannot have `weight`
+  - Are excluded from scoring
+- Constraints use operator/value pairs:
+  - `>=`
+  - `<=`
+  - `>`
+  - `<`
+  - `==`
+- AND logic is applied:
+  - Within a single criterion (multiple constraints)
+  - Across all required criteria
+- Float tolerance introduced:
+  - `EPSILON = 1e-6`
+  - Prevents rejection due to minor floating-point precision issues.
+
+---
+
+### Edge Cases Tested
+
+- All options survive.
+- Partial elimination.
+- All options eliminated.
+- Float boundary behavior (tolerance validation).
+- Boolean equality constraints.
+- Weight policy enforcement.
+

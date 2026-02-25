@@ -45,22 +45,23 @@ Where:
 
 ---
 
-## Current Status (End of Day 2)
+## Current Status
 
 Completed:
 
 - Folder structure
 - Dataclass models
-- Validation layer
+- Validation layer 
 - Hard constraint filtering
 - Sample JSON structure
+- Validation stress testing 
+- Constraint filtering testing 
 
 Not completed yet:
 
 - Normalization
 - Weighted scoring
 - Ranking
-- Explanation breakdown
 
 
 ---
@@ -68,4 +69,4 @@ Not completed yet:
 ## How to Run
 
 ```bash
-python main.py sample_inputs/cloud_provider_selection.json
+python main.py sample_inputs/'sample_test_file_name'

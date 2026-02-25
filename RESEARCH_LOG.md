@@ -68,3 +68,28 @@
   - Strict type checking for numeric, boolean, and categorical.
   - Required criteria cannot have weights.
 - Wrapped main execution in try/except to prevent traceback exposure.
+
+## 2026-02-26 - Constraint filtering tests
+
+### AI prompts
+
+- What files should i give to test constraint filtering 
+- Code for tolerance testing
+
+### Decisions made
+
+- Required criteria cannot have weight.
+- Used operator/value pairs instead of fixed min/max format.
+- Supported: >=, <=, >, <, ==
+- Added float tolerance (EPSILON = 1e-6).
+
+### Tested:
+
+- All survive
+- Partial elimination
+- All eliminated
+- Float boundary cases
+- Boolean constraints
+
+Constraint layer is now deterministic and stable.
+
