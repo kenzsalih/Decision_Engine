@@ -1,0 +1,53 @@
+{
+  "criteria": [
+    {
+      "name": "cost_per_month",
+      "type": "numeric",
+      "weight": 1.0,
+      "required": false,
+      "benefit": false,
+      "constraints": [
+        { "operator": "<=", "value": 200 }
+      ]
+    },
+    {
+      "name": "availability_percent",
+      "type": "numeric",
+      "required": true,
+      "benefit": true,
+      "constraints": [
+        { "operator": ">=", "value": 99.999 }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "name": "AWS",
+      "values": {
+        "cost_per_month": 110,
+        "availability_percent": 99.95
+      }
+    },
+    {
+      "name": "GCP",
+      "values": {
+        "cost_per_month": 95,
+        "availability_percent": 99.99
+      }
+    },
+    {
+      "name": "Azure",
+      "values": {
+        "cost_per_month": 130,
+        "availability_percent": 99.92
+      }
+    },
+    {
+      "name": "DigitalOcean",
+      "values": {
+        "cost_per_month": 80,
+        "availability_percent": 99.8
+      }
+    }
+  ]
+}

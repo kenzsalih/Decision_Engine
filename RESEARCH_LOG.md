@@ -68,6 +68,3 @@
   - Strict type checking for numeric, boolean, and categorical.
   - Required criteria cannot have weights.
 - Wrapped main execution in try/except to prevent traceback exposure.
-
-
--

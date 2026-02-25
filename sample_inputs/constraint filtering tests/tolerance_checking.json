@@ -1,0 +1,32 @@
+{
+  "criteria": [
+    {
+      "name": "cost_per_month",
+      "type": "numeric",
+      "weight": 1.0,
+      "required": false,
+      "benefit": false,
+      "constraints": [
+        { "operator": "<=", "value": 200 }
+      ]
+    },
+    {
+      "name": "availability_percent",
+      "type": "numeric",
+      "required": true,
+      "benefit": true,
+      "constraints": [
+        { "operator": ">=", "value": 99.95 }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "name": "AWS",
+      "values": {
+        "cost_per_month": 110,
+        "availability_percent": 99.949
+      }
+    }
+  ]
+}
