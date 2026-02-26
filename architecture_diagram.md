@@ -4,12 +4,12 @@ Validator Layer
     ↓
 Constraint Filter
     ↓
-Normalization (Planned Day 3)
+Normalization
     ↓
-Scoring (Planned Day 3)
+Scoring
     ↓
-Ranking (Planned Day 3)
+Ranking
     ↓
-Explanation Generator (Planned Day 3)
+Explanation Generator
     ↓
 Final Ranked Output

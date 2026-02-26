@@ -1,21 +1,19 @@
-import json
-import sys
-from engine.validator import validate_input
-from engine.constraint_filter import apply_constraints
-
+from engine.engine import run_engine
 
 def main(file_path):
     try:
         with open(file_path, "r") as f:
             data = json.load(f)
 
-        validate_input(data)
+        result = run_engine(data)
 
-        surviving = apply_constraints(data)
-
-        print("Surviving options after constraint filtering:")
-        for option in surviving:
+        print("Surviving options:")
+        for option in result["surviving"]:
             print("-", option["name"])
+
+        print("\nNormalized numeric criteria:")
+        for criterion, utilities in result["normalized"].items():
+            print(f"{criterion}: {utilities}")
 
     except ValueError as e:
         print(f"Validation Error: {e}")
@@ -32,11 +30,3 @@ def main(file_path):
     except Exception as e:
         print(f"Unexpected Error: {e}")
         sys.exit(1)
-
-
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python main.py <input_json_file>")
-        sys.exit(1)
-
-    main(sys.argv[1])

@@ -46,10 +46,13 @@ def validate_input(data: dict):
 
         # Numeric-specific validation
         if c["type"] == "numeric":
-            if "benefit" not in c:
-                raise ValueError(f"Numeric criterion '{name}' must define 'benefit'.")
-            if not isinstance(c["benefit"], bool):
-                raise ValueError(f"'benefit' must be boolean for '{name}'.")
+            if "goal" not in c:
+                raise ValueError(f"Numeric criterion '{name}' must define 'goal'.")
+
+            if c["goal"] not in ["benefit", "cost"]:
+                raise ValueError(
+                    f"Numeric criterion '{name}' goal must be 'benefit' or 'cost'."
+                )
 
         # Constraint structure validation
         if "constraints" in c:

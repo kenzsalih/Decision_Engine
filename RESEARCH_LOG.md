@@ -69,7 +69,7 @@
   - Required criteria cannot have weights.
 - Wrapped main execution in try/except to prevent traceback exposure.
 
-## 2026-02-26 - Constraint filtering tests
+## 2026-02-26 - Constraint filtering tests (12:10 am)
 
 ### AI prompts
 
@@ -93,3 +93,12 @@
 
 Constraint layer is now deterministic and stable.
 
+## 2026-02-26 - Constraint filtering tests (11:45 am)
+
+### AI prompts made
+
+- What tests needed to check normalization phase
+- What different types of testing are there in software engineering
+- What is pytest in python and how to run it
+- Unit test cases for normalization.py
+- Integration test cases for normalization
