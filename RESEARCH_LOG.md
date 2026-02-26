@@ -93,12 +93,14 @@
 
 Constraint layer is now deterministic and stable.
 
-## 2026-02-26 - Constraint filtering tests (11:45 am)
+## 2026-02-26 - Constraint filtering tests (09:35 pm)
 
 ### AI prompts made
 
+- Different normalization approaches
 - What tests needed to check normalization phase
 - What different types of testing are there in software engineering
 - What is pytest in python and how to run it
 - Unit test cases for normalization.py
 - Integration test cases for normalization
+

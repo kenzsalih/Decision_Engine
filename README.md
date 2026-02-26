@@ -56,10 +56,11 @@ Completed:
 - Sample JSON structure
 - Validation stress testing 
 - Constraint filtering testing 
+- Normalization and testng (unit testing and some integration testing)
 
 Not completed yet:
 
-- Normalization
+- Scoring
 - Weighted scoring
 - Ranking
 

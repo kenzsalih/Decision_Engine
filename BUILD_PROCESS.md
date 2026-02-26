@@ -189,3 +189,19 @@ Implement hard constraint elimination before normalization and scoring.
 - Boolean equality constraints.
 - Weight policy enforcement.
 
+## Date 2026-02-26 (09:31 pm)
+
+Completed normalization layer.
+
+- Implemented deterministic normalization
+- Added benefit and cost handling
+- Enforced constraint-first rule (normalize only after filtering)
+
+Testing:
+
+- Unit tests for normalization logic
+- Integration tests to verify:
+  - Benefit normalization
+  - Cost normalization
+  - Constraint interaction
+- Ensured filtering happens before normalization
