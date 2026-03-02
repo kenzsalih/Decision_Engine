@@ -5,7 +5,7 @@
       "type": "numeric",
       "weight": 0.4,
       "required": false,
-      "benefit": false,
+      "goal": "cost",
       "constraints": [
         {
           "operator": "<=",

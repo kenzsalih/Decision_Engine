@@ -8,7 +8,7 @@ class Criterion:
     type: str  # numeric | categorical | boolean
     weight: Optional[float]
     required: bool
-    benefit: Optional[bool] = None
+    goal: Optional[str] = None  # "benefit" | "cost"
     constraints: Optional[List[Dict[str, Any]]] = None
 
 

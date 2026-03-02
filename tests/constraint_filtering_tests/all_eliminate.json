@@ -5,7 +5,7 @@
       "type": "numeric",
       "weight": 1.0,
       "required": false,
-      "benefit": false,
+      "goal": "cost",
       "constraints": [
         { "operator": "<=", "value": 200 }
       ]
@@ -14,7 +14,7 @@
       "name": "availability_percent",
       "type": "numeric",
       "required": true,
-      "benefit": true,
+      "goal": "benefit",
       "constraints": [
         { "operator": ">=", "value": 99.999 }
       ]

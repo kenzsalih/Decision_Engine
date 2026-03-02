@@ -4,7 +4,7 @@
       "name": "cost_per_month",
       "type": "numeric",
       "required": false,
-      "benefit": false,
+      "goal": "cost",
       "constraints": [
         {
           "operator": "<=",
@@ -17,7 +17,7 @@
       "type": "numeric",
       "weight": 0.3,
       "required": false,
-      "benefit": false,
+      "goal": "cost",
       "constraints": [
         {
           "operator": "<=",
@@ -30,7 +30,7 @@
       "type": "numeric",
       "weight": 0.2,
       "required": false,
-      "benefit": true,
+      "goal": "benefit",
       "constraints": [
         {
           "operator": ">=",
@@ -43,6 +43,7 @@
       "type": "boolean",
       "weight": 0.1,
       "required": false,
+      "goal": "benefit",
       "constraints": [
         {
           "operator": "==",
