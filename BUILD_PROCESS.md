@@ -205,3 +205,45 @@ Testing:
   - Cost normalization
   - Constraint interaction
 - Ensured filtering happens before normalization
+
+
+---
+
+## Date: 2026-02-27
+
+Cleaning up architecture before moving to scoring.
+
+### Problem Identified
+
+Even though I had defined dataclasses earlier, most of the engine was still operating directly on raw dictionaries.  
+That was not aligned with the layered architecture I originally designed.
+
+There was also a schema inconsistency:
+- Validator expected `"benefit": true/false`
+- Normalization expected `"goal": "benefit" | "cost"`
+
+This needed to be standardized before continuing.
+
+---
+
+### What I changed
+
+1. Standardized numeric criteria to use: "goal": "benefit" | "cost"
+2. Introduced `input_parser.py`:
+- Converts JSON into `Criterion` and `Option` objects.
+- After validation, raw dicts are no longer used internally.
+
+3. Updated:
+- constraint_filter
+- normalization
+- engine (orchestrator)
+
+to use dataclass attribute access instead of dict indexing.
+
+4. Fixed return contract:
+- Engine now always returns a structured dictionary.
+- Removed mixed return types (`[]` vs dict).
+
+---
+
+This updating  was done  to avoid confusion and more errors while implementing the next steps.

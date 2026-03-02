@@ -104,3 +104,22 @@ Constraint layer is now deterministic and stable.
 - Unit test cases for normalization.py
 - Integration test cases for normalization
 
+---
+
+## 2026-02-27 – Architecture Consistency & Layer Separation
+
+### AI Prompts Used
+
+- How to verify layered architecture integrity in Python projects?
+- Any checks to make before moving on to the scoring step?
+
+### What I Decided
+
+- Introduce a dedicated `input_parser` layer.
+- Enforce that:
+  - Only validator handles raw JSON.
+  - All other layers operate strictly on dataclasses.
+- Standardize numeric schema to use `"goal"` instead of `"benefit"` boolean.
+
+
+Architecture is now clean and ready for weighted scoring implementation.
