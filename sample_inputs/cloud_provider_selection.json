@@ -3,9 +3,9 @@
     {
       "name": "cost_per_month",
       "type": "numeric",
+      "goal": "cost",
       "weight": 0.4,
       "required": false,
-      "goal": "cost",
       "constraints": [
         {
           "operator": "<=",
@@ -16,9 +16,9 @@
     {
       "name": "latency_ms",
       "type": "numeric",
+      "goal": "cost",
       "weight": 0.3,
       "required": false,
-      "benefit": false,
       "constraints": [
         {
           "operator": "<=",
@@ -29,9 +29,9 @@
     {
       "name": "availability_percent",
       "type": "numeric",
+      "goal": "benefit",
       "weight": 0.2,
       "required": false,
-      "benefit": true,
       "constraints": [
         {
           "operator": ">=",

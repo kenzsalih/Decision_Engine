@@ -29,4 +29,5 @@ def test_normalization_after_filter():
     result = run_engine(data)
 
     # surviving scores: [80, 100]
-    assert result["normalized"]["score"] == [0.0, 1.0]
+    assert result["normalized"]["B"]["dummy"] == 0.0
+    assert result["normalized"]["C"]["dummy"] == 1.0

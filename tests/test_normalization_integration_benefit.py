@@ -21,4 +21,6 @@ def test_engine_normalization_benefit():
 
     result = run_engine(data)
 
-    assert result["normalized"]["performance"] == [0.5, 0.0, 1.0]
+    assert result["normalized"]["AWS"]["performance"] == 0.5
+    assert result["normalized"]["Azure"]["performance"] == 0.0
+    assert result["normalized"]["GCP"]["performance"] == 1.0

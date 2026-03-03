@@ -15,4 +15,6 @@ def test_engine_normalization_cost():
 
     result = run_engine(data)
 
-    assert result["normalized"]["cost"] == [0.5, 1.0, 0.0]
+    assert result["normalized"]["A"]["cost"] == 0.5
+    assert result["normalized"]["B"]["cost"] == 1.0
+    assert result["normalized"]["C"]["cost"] == 0.0

@@ -47,3 +47,52 @@ class Normalizer:
             normalized.append(round(utility, Normalizer.PRECISION))
 
         return normalized
+
+from typing import Dict, List
+from models.dataclasses import Criterion, Option
+
+
+def normalize_all(
+    criteria: List[Criterion],
+    options: List[Option]
+) -> Dict[str, Dict[str, float]]:
+
+    normalized_results = {
+        option.name: {}
+        for option in options
+    }
+
+    for criterion in criteria:
+
+        # Required criteria are NOT scored
+        if criterion.required:
+            continue
+
+        if criterion.type == "numeric":
+
+            values = [
+                option.values[criterion.name]
+                for option in options
+            ]
+
+            normalized_values = Normalizer.normalize_numeric(
+                values,
+                criterion.goal
+            )
+
+            for i, option in enumerate(options):
+                normalized_results[option.name][criterion.name] = normalized_values[i]
+
+        elif criterion.type == "boolean":
+
+            for option in options:
+                raw = option.values[criterion.name]
+                normalized_results[option.name][criterion.name] = 1.0 if raw else 0.0
+
+        elif criterion.type == "categorical":
+
+            raise NotImplementedError(
+                f"Categorical normalization not implemented: {criterion.name}"
+            )
+
+    return normalized_results
