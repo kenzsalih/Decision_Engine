@@ -106,7 +106,7 @@ Constraint layer is now deterministic and stable.
 
 ---
 
-## 2026-02-27 – Architecture Consistency & Layer Separation
+## 2026-03-02 – Architecture Consistency & Layer Separation
 
 ### AI Prompts Used
 
@@ -123,3 +123,15 @@ Constraint layer is now deterministic and stable.
 
 
 Architecture is now clean and ready for weighted scoring implementation.
+
+---
+
+## 2026-03-02 – Scoring and Ranking Layer
+
+### Prompts Used
+- "implementing deterministic weighted sum scoring"
+- "dense ranking algorithm implementation"
+- "how to handle tie tolerance in floating point comparison"
+- "unit tests for scoring"
+- "unit tests for ranking"
+- "integration testing for the complete project"

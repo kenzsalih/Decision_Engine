@@ -209,7 +209,7 @@ Testing:
 
 ---
 
-## Date: 2026-02-27
+## Date: 2026-03-02 
 
 Cleaning up architecture before moving to scoring.
 
@@ -247,3 +247,21 @@ to use dataclass attribute access instead of dict indexing.
 ---
 
 This updating  was done  to avoid confusion and more errors while implementing the next steps.
+
+---
+
+## Date: 2026-03-03 (10:55 pm)
+
+Implemented scoring and ranking
+
+Steps done:
+
+1. Implemented scoring layer.
+2. Normalized weights internally.
+3. Added UtilityBreakdown for full explainability.
+4. Implemented dense ranking logic.
+6. Added lexicographic ordering for deterministic results.
+7. Wrote integration tests.
+
+After this, the core engine is complete.
+
