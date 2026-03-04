@@ -96,5 +96,22 @@ Core deterministic engine is now complete and stable.
 
 ## How to Run
 
-```bash
-python main.py sample_inputs/cloud_provider_selection.json
+Run in command line:
+
+python main.py
+
+You will see two modes:
+
+1. Run cloud provider example  
+   Loads the predefined cloud provider dataset and allows selecting which criteria to use.
+
+2. Create your own decision  
+   The CLI asks for:
+   - decision topic
+   - options
+   - criteria
+   - goal type (benefit / cost)
+   - optional weights
+   - values for each option
+
+The CLI converts the inputs into the same JSON structure expected by the engine and runs the full pipeline.

@@ -129,7 +129,7 @@ The idea is: identical input should always produce identical output.
 
 ---
 
-### Reflection After Day 2
+### After Day 2
 
 Now the project has:
 
@@ -254,7 +254,7 @@ This updating  was done  to avoid confusion and more errors while implementing t
 
 Implemented scoring and ranking
 
-Steps done:
+### Steps done:
 
 1. Implemented scoring layer.
 2. Normalized weights internally.
@@ -265,3 +265,23 @@ Steps done:
 
 After this, the core engine is complete.
 
+---
+
+## Date: 2026-03-04 (08:45 pm)
+
+Interactive CLI Interface
+
+### Changes made:
+- Created cli_interface.py to handle user interaction.
+- Refactored main.py to only start the CLI.
+- Added two CLI modes:
+  - run predefined example (cloud provider selection)
+  - create a custom decision interactively.
+
+The CLI collects input and converts it into the same JSON structure expected by the engine.
+
+### Important design decision:
+The engine pipeline was **not modified**.  
+The CLI only prepares input and calls `run_engine()`.
+
+This keeps the architecture clean and the scoring logic isolated from the interface.

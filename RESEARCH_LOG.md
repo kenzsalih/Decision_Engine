@@ -126,7 +126,7 @@ Architecture is now clean and ready for weighted scoring implementation.
 
 ---
 
-## 2026-03-02 – Scoring and Ranking Layer
+## 2026-03-03 – Scoring and Ranking Layer
 
 ### Prompts Used
 - "implementing deterministic weighted sum scoring"
@@ -135,3 +135,12 @@ Architecture is now clean and ready for weighted scoring implementation.
 - "unit tests for scoring"
 - "unit tests for ranking"
 - "integration testing for the complete project"
+
+---
+
+## 2026-03-04 – Implemented a better CLI interface layer
+
+### Prompts used
+- "Sample test cases to run and test working of the interfface layer"
+- "how to implement a better cli layer without affecting the current pipeline system"
+
