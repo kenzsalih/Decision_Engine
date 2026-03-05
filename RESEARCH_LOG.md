@@ -144,3 +144,13 @@ Architecture is now clean and ready for weighted scoring implementation.
 - "Sample test cases to run and test working of the interfface layer"
 - "how to implement a better cli layer without affecting the current pipeline system"
 
+---
+
+## 2026-03-05 - Improved constraint filtering and CLI behaviour
+
+### Prompts used:
+
+- "why the explanation table is not being printed properly?"
+- "Give stress-test cases to test working of the project"
+
+---

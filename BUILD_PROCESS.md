@@ -285,3 +285,25 @@ The engine pipeline was **not modified**.
 The CLI only prepares input and calls `run_engine()`.
 
 This keeps the architecture clean and the scoring logic isolated from the interface.
+
+---
+
+## Date : 2026-03-05 (03:30 pm)
+
+Improved the constraint filtering and CLI behaviour.
+
+### Changes made:
+- Fixed constraint filtering logic so criteria constraints are applied correctly.
+- Fixed CLI display bug where ranking tables were not printing correctly.
+- Added proper handling for cases where all options get filtered by constraints.
+- Improved explanation table output for scoring breakdown.
+
+### Testing done:
+- Normal decision scenario
+- Equal-value normalization case
+- Constraint removing all options
+- Tie score scenario
+
+All tests produced expected results.  
+
+---

@@ -113,5 +113,6 @@ You will see two modes:
    - goal type (benefit / cost)
    - optional weights
    - values for each option
+   - optional constraints
 
 The CLI converts the inputs into the same JSON structure expected by the engine and runs the full pipeline.
