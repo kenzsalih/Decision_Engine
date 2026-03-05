@@ -8,17 +8,24 @@ from engine.scoring import score_options
 from engine.ranking import rank_options
 
 def run_engine(data: dict):
-    """
-    Full deterministic decision pipeline.
-    """
 
-    # 1. Validate raw input
     validate_input(data)
 
-    # 2. Convert to dataclasses
     criteria, options = parse_input(data)
 
-    # 3. Apply hard constraints (required criteria only)
+    constraints = data.get("constraints", [])
+
+    # Attach CLI constraints to criteria objects
+    for constraint in constraints:
+        cname = constraint["criterion"]
+
+        for c in criteria:
+            if c.name == cname:
+                if not hasattr(c, "constraints") or c.constraints is None:
+                    c.constraints = []
+                c.constraints.append(constraint)
+                
+
     surviving_options = apply_constraints(criteria, options)
 
     if not surviving_options:
@@ -27,13 +34,10 @@ def run_engine(data: dict):
             "normalized": {}
         }
 
-    # 4. Normalize surviving options
     normalized = normalize_all(criteria, surviving_options)
 
-    # 5. Score
     scored = score_options(criteria, surviving_options, normalized)
 
-    # 6. Rank
     ranked = rank_options(scored)
 
     return {
