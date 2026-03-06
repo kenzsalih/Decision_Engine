@@ -98,6 +98,52 @@ Core deterministic engine is now complete and stable.
 
 ---
 
+## Installation Guide
+
+### Prerequisites
+
+- Python 3.7 or higher
+- Git (for cloning the repository)
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/kenzsalih/decision-companion-engine
+   cd "Decision Companion Engine"
+   ```
+
+2. **Verify Python installation**
+
+   ```bash
+   python --version
+   ```
+
+   Ensure you have Python 3.7 or higher installed.
+
+3. **No external dependencies required**
+
+   This project uses only Python standard libraries, so no additional packages need to be installed.
+
+4. **Verify installation**
+
+   Run the test suite to ensure everything is working correctly:
+
+   ```bash
+   python -m pytest tests/
+   ```
+
+   Or simply run the main program:
+
+   ```bash
+   python main.py
+   ```
+
+You are now ready to use the Decision Companion Engine.
+
+---
+
 ## How to Run
 
 Run in command line:
@@ -120,3 +166,31 @@ You will see two modes:
    - optional constraints
 
 The CLI converts the inputs into the same JSON structure expected by the engine and runs the full pipeline.
+
+---
+
+## Future Enhancements
+
+If I had more time to continue working on this project, there are several things I would like to improve or add.
+
+### Improving Usability
+
+- **Web Interface**  
+  Currently the system runs only through the command line. In the future, building a web interface using something like React or Vue would make it much easier to use.
+
+- **Mobile Version**  
+  Another useful improvement would be a mobile version. Having the ability to use the decision engine on a phone could be helpful when making quick decisions on the go.
+
+### Additional Features
+
+- **Data Visualization**  
+  Right now the engine outputs numerical results and rankings. Adding charts such as bar graphs, radar charts, or heatmaps would make it easier to understand how each option performs across different criteria.
+
+- **Decision History and Templates**  
+  It would also be useful to allow users to save decision structures as templates. This way, if someone frequently evaluates similar decisions, they wouldn’t need to recreate everything from scratch.
+  
+- **Export Options**  
+  Another improvement would be adding export functionality. For example, generating a PDF report or exporting the results to Excel would make it easier to share the results with others or include them in reports.
+
+- **AI-Assisted Suggestions**  
+  While the core scoring engine should remain deterministic, a lightweight AI assistant could help by suggesting possible criteria for a given decision type or highlighting unusual weight distributions.
