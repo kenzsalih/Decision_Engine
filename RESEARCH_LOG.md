@@ -52,7 +52,7 @@
 ### What I Modified
 
 - Simplified constraint logic to AND-only
-- Limited operators for now (>=, <=, ==)
+- Supported operators: >=, <=, >, <, ==,  between 
 
 ## 2026-02-25 - Stress-test the validator and check for errors
 

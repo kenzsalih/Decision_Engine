@@ -28,6 +28,10 @@ Where:
 - wᵢ = normalized weight of criterion
 - uᵢ = normalized utility value (0–1)
 
+Boolean criteria are mapped directly to utility values:
+True → 1
+False → 0
+
 Weights are internally normalized before scoring.  
 Utilities are computed using min-max normalization (benefit or cost).
 
@@ -41,7 +45,7 @@ Step-by-step:
 
 1. Validate raw JSON input.
 2. Convert input to internal dataclass models.
-3. Apply hard constraints (required criteria only).
+3. Apply constraint filtering (user-defined constraints).
 4. Normalize surviving options.
 5. Compute weighted scores.
 6. Rank using dense ranking method.
@@ -109,8 +113,8 @@ You will see two modes:
    The CLI asks for:
    - decision topic
    - options
-   - criteria
-   - goal type (benefit / cost)
+   - criteria (numeric or boolean)
+   - goal type for numeric criteria (benefit / cost)
    - optional weights
    - values for each option
    - optional constraints
